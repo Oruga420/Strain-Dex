@@ -1,0 +1,5 @@
+{
+  "name": "Strain Dex",
+  "description": "An app to catalog and analyze cannabis products, inspired by the Pokédex. Users can upload a photo of a product, add their own review, and use AI to extract details from the image and enhance their description.",
+  "requestFramePermissions": []
+}
