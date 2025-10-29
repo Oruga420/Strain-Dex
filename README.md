@@ -10,11 +10,19 @@ View your app in AI Studio: https://ai.studio/apps/drive/1zCpbypBKe7BsUNYHJTnY_B
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:** Node.js 20.19+ (or 22.x) and the [Vercel CLI](https://vercel.com/docs/cli)
 
+1. Install dependencies: `npm install`
+2. Set the Gemini key in `.env.local` (create it if missing):
+   ```bash
+   GEMINI_API_KEY=your-google-genai-key
+   VITE_API_BASE_URL=http://localhost:3000
+   ```
+3. Start the full stack locally (Vite + serverless functions): `vercel dev`
+4. Open the printed URL (default http://localhost:3000) to use the app.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Deploy to Vercel
+
+1. Push this repo to GitHub and import it in Vercel.
+2. In Project Settings → Environment Variables add `GEMINI_API_KEY` with your Gemini API key.
+3. Deploy. Vercel runs `npm run build`, serves `dist/`, and exposes the serverless endpoint at `/api/analyze`.
