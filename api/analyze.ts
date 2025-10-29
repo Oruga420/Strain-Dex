@@ -10,6 +10,10 @@ if (!API_KEY) {
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
+export const config = {
+  runtime: 'nodejs20.x'
+};
+
 const responseSchema = {
   type: Type.OBJECT,
   properties: {
